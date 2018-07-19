@@ -3,7 +3,11 @@
 ## Project setup
 
 ### Clone 
-then run `npm run test:unit`
+then run 
+```
+npm install
+npm run test:unit
+```
 
 ### Alternatively
 With @vue/cli rc5
