@@ -1,21 +1,35 @@
-# reprod
+# Steps to reproduce
 
 ## Project setup
+
+### Clone 
+then run `npm run test:unit`
+
+### Alternatively
+With @vue/cli rc5
 ```
-npm install
+vue create <project-name>
+
 ```
 
-### Compiles and hot-reloads for development
+**select:**
+
 ```
-npm run serve
+Typescript
+Vuex
+Jest
 ```
 
-### Compiles and minifies for production
+After install replace `/tests/HelloWorld.spec.ts` content with:
 ```
-npm run build
-```
+import { shallowMount } from '@vue/test-utils'
+import HelloWorld from '@/components/HelloWorld.vue'
+import store from "@/store";
 
-### Run your unit tests
+describe('HelloWorld.vue', () => {
+  it('renders props.msg when passed', () => {
+    store.state;
+  })
+})
 ```
-npm run test:unit
-```
+**Run** `npm run test:unit`
